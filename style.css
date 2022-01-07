@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+    font-family: 'Poppins', sans-serif;
+}
+.container1--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0px 30px;
+}
+.logo, .telefone{
+    font-weight: bold;
+    font-size: 30px;
+}
+.menuCelular{
+    display: none;
+}
+.container1--header ul{
+    list-style: none;
+}
+.item{
+    display: inline;
+    margin: 20px;
+}
+.item a{
+    text-decoration: none;
+    color: black;
+}
+.container2--header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    height: 45px;
+}
+.containerBusca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerBusca input{
+    font-size: 16px;
+    padding: 0px 10px;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.containerBusca input::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+.containerBusca i{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-left: -40px;
+    font-size: 20px;
+    padding: 0px 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+}
+.banner{
+    overflow-x: hidden;
+    height: 350px;
+}
+.banner .bannerImg1{
+    width: 100vw;
+    height: 350px;
+    background-image: url('./imagens/banner.png');
+    background-size:contain;
+    background-position: center;
+}
+.banner .bannerImg2{
+    width: 100vw;
+    height: 350px;
+    background-image: url('./imagens/ofertas.png');
+    background-size:contain;
+    background-position: center;
+}.banner .bannerImg3{
+    width: 100vw;
+    height: 350px;
+    background-image: url('./imagens/produtosbanner.png');
+    background-size:contain;
+    background-position: center;
+}
+.slider--banner{
+    display: flex;
+    width: 300%;
+    overflow-x: hidden;
+    transition: 1s;
+}
+.setas-banner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -180px;
+}
+.setas-banner i{
+    color: white;
+    font-size: 30px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+.linha1{
+    margin-top: 200px;
+    text-align: center;
+}
+.linha1 h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.listaProdutos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+.produto{
+    background: rgb(240, 239, 239);
+    border-radius: 10px;
+    padding: 30px;
+}
+.linha img{
+    width: 200px;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.produto p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.nomeTenis{
+    font-weight: bold;
+}
+.precoTenis{
+    margin-bottom: 10px;
+}
+.linha a{
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding: 3px 30px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.linha2{
+    margin-top: 100px;
+    text-align: center;
+}
+.linha2 h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+.linha img:hover{
+    transform: scale(1.1);
+}
+footer{
+    background: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    margin-top: 100px;
+}
+@media(max-width: 768px){
+    .linha img{
+        width: 150px;
+    }
+    .linha1{
+        margin-top: 20px;
+    }
+    .linha1 h2{
+        font-family: 'Poppins', sans-serif;
+        font-size: 35px;
+        margin-bottom: 0px;
+    }
+    .linha2 h2{
+        margin-bottom: 0px;
+    }
+}
+@media(max-width: 425px){
+    .telefone{
+        display: none;
+    }
+    .container1--header ul{
+        display: block;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100vw;
+        background: white;
+        height: 0%;
+        overflow: hidden;
+        transition: 1s;
+    }
+    .item{
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid black;
+        margin: 0px;
+        padding: 10px 0px;
+    }
+    .item a{
+        color: black;
+        padding: 10px 0px;
+        width: 100%;
+    }
+    .menuCelular{
+        display: block;
+        border-top: 2px solid black;
+        transition: .5s;
+    }
+    .menuCelular::after, .menuCelular::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        margin: 5px 0px;
+        background: black;
+        transition: .5s;
+    }
+    .menu.active ul{
+        height: calc(100vh - 80px);
+    }
+    .menu.active .menuCelular::after{
+        transform: rotate(135deg);
+        margin-top: -7px;
+    }
+    .menu.active .menuCelular::before{
+        transform: rotate(-135deg);
+    }
+    .menu.active .menuCelular{
+        border-top-color: transparent;
+    }
+    .containerBusca input{
+        font-size: 14px;
+        width: 350px;
+        border-radius: 5px;
+    }
+    .containerBusca i{
+        font-size: 16px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .linha1 h2, .linha2 h2{
+        font-size: 25px;
+    }
+    .logo{
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .produto{
+        padding: 20px;
+        margin: 15px 0px;
+    }
+    .linha img{
+        width: 200px;
+    }
+    .linha a{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    .setas-banner i{
+        font-size: 20px;
+        padding: 5px;
+    }
+}
+@media(max-width: 375px){
+    .containerBusca input{
+        width: 320px;
+    }
+}
+@media(max-width: 320px){
+    .containerBusca input{
+        width: 260px;
+    }
+}
